@@ -5,13 +5,13 @@
 class Wifimon < Formula
   desc "Real-time Wi-Fi terminal monitor with Growl notifications"
   homepage "https://github.com/cumulus13/go-wifimon"
-  version "1.0.5"
+  version "1.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.5/wifimon_1.0.5_darwin_amd64.tar.gz"
-      sha256 "91456082dfe73bd00be3af3f8554bed9fdf19128ed5a642d9fa71c12e2ba381b"
+      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.6/wifimon_1.0.6_darwin_amd64.tar.gz"
+      sha256 "45d7411b274c3dcd8cc2acffcddee551872bca8e50d9fc7751002424a527ec74"
 
       define_method(:install) do
         bin.install "wifimon"
@@ -19,8 +19,8 @@ class Wifimon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.5/wifimon_1.0.5_darwin_arm64.tar.gz"
-      sha256 "092b92c239386d785f4cf2dd898c68c4c9db671676af3f47f8bbe4f549b75f76"
+      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.6/wifimon_1.0.6_darwin_arm64.tar.gz"
+      sha256 "e4ecb2f5ea823ec5b455ea8919d8756417d0780f584ed2d469b0b910fea3d53d"
 
       define_method(:install) do
         bin.install "wifimon"
@@ -31,16 +31,16 @@ class Wifimon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.5/wifimon_1.0.5_linux_amd64.tar.gz"
-      sha256 "3c1682a666aa0b88944d07bbf3d931365bfa8c4524bad519d215f617ce8a7e17"
+      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.6/wifimon_1.0.6_linux_amd64.tar.gz"
+      sha256 "cbc8f5c87054a6889a46ab4a8c4016edf54e45bff543a817e9d49d965ddf9f7b"
       define_method(:install) do
         bin.install "wifimon"
         (pkgshare/"assets").install Dir["assets/*"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.5/wifimon_1.0.5_linux_arm64.tar.gz"
-      sha256 "d5efa95ee11e0013149db26a9e9135a4d531fc69bed4ca4a94f6471af8c4fc3e"
+      url "https://github.com/cumulus13/go-wifimon/releases/download/v1.0.6/wifimon_1.0.6_linux_arm64.tar.gz"
+      sha256 "c3aaf45a85ed4ac15976628e465f2490fd8b97dd68fdd3353ae711920723c3a3"
       define_method(:install) do
         bin.install "wifimon"
         (pkgshare/"assets").install Dir["assets/*"]
